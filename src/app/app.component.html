@@ -1,12 +1,19 @@
 <form class="form" [formGroup]="group">
   <div class="form-group">
-    <h2>NgbInputDatepickerConfig test</h2>
-    <div>test with NgbInputDatepickerConfig</div>
+    <h2>NgbInputDatepicker Focusout Test</h2>
+    <div>test with NgbInputDatepicker Focusout</div>
   </div>
   <div class="input-group" style="width: 300px;">
-    <input class="form-control" placeholder="yyyy-mm-dd" name="dp"
-    [formControl]="first" ngbDatepicker #d="ngbDatepicker" container="body" 
-    (focusout)="onFocusOut()"/>
+    <input
+      class="form-control"
+      placeholder="yyyy-mm-dd"
+      name="dp"
+      [formControl]="first"
+      ngbDatepicker
+      #d="ngbDatepicker"
+      container="body"
+      (focusout)="onFocusOut()"
+    />
     <div class="input-group-append">
       <button
         class="btn btn-outline-secondary calendar"
@@ -33,17 +40,5 @@
         type="button"
       ></button>
     </div>
-  </div>
-  <div>
-    first.errors
-    <pre>
-      {{ first.errors | json }}
-    </pre>
-  </div>
-  <div>
-    second.errors
-    <pre>
-      {{ second.errors | json }}
-    </pre>
   </div>
 </form>
