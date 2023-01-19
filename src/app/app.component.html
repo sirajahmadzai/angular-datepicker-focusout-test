@@ -5,7 +5,8 @@
   </div>
   <div class="input-group" style="width: 300px;">
     <input class="form-control" placeholder="yyyy-mm-dd" name="dp"
-    [formControl]="first" ngbDatepicker #d="ngbDatepicker" container=`"body"` />
+    [formControl]="first" ngbDatepicker #d="ngbDatepicker" container="body" 
+    (focusout)="onFocusOut()"/>
     <div class="input-group-append">
       <button
         class="btn btn-outline-secondary calendar"
@@ -23,6 +24,7 @@
       [restoreFocus]="null"
       [minDate]="minDate"
       [maxDate]="maxDate"
+      (focusout)="onFocusOutWithoutBody()"
     />
     <div class="input-group-append">
       <button

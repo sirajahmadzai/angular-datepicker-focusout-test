@@ -58,4 +58,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   private control(name: string): FormControl {
     return this.group.controls[name] as FormControl;
   }
+
+  onFocusOut(){
+    console.log("Focusout with container='body' not firing!!!!");
+  }
+
+  onFocusOutWithoutBody(){
+    console.log("Focusout Firing!!!!!!");
+  }
+
 }
